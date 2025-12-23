@@ -14,5 +14,5 @@ app.get('/sum', (req, res) => {
 module.exports = app;
 
 if (require.main === module) {
-  app.listen(3000, () => console.log('App running on port 3000'));
+  app.listen(3001, () => console.log('App running on port 3001'));
 }

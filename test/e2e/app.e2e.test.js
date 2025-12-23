@@ -4,7 +4,7 @@ describe('E2E Test', () => {
   let server;
 
   beforeAll(() => {
-    server = require('../../src/app').listen(3000);
+    server = require('../../src/app').listen(3001);
   });
 
   afterAll(() => {
@@ -12,7 +12,7 @@ describe('E2E Test', () => {
   });
 
   it('should work end-to-end', async () => {
-    const res = await request('http://localhost:3000').get('/sum?a=5&b=5');
+    const res = await request('http://localhost:3001').get('/sum?a=5&b=5');
     expect(res.body.result).toBe(10);
   });
 });
